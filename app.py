@@ -32,7 +32,7 @@ X[:, 1:5] = imputer.transform(X[:, 1:5])
 # Encode Brand
 # -----------------------------
 ct = ColumnTransformer(
-    transformers=[('encoder', OneHotEncoder(), [0])],
+    transformers=[('encoder', OneHotEncoder(drop = "first"), [0])],
     remainder='passthrough'
 )
 
